@@ -1,7 +1,7 @@
 package com.santiago.proyectohibernate.controller;
 
 import com.santiago.proyectohibernate.entities.User;
-import com.santiago.proyectohibernate.services.UserService;
+import com.santiago.proyectohibernate.services.UserServiceDAO;
 import lombok.RequiredArgsConstructor;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
@@ -9,12 +9,12 @@ import org.springframework.web.bind.annotation.*;
 import java.util.List;
 
 @RestController
-@RequestMapping("/api")
+@RequestMapping("/api/dao")
 @RequiredArgsConstructor
-public class UserController {
+public class UserControllerDAO {
 
     @Autowired
-    UserService service;
+    UserServiceDAO service;
 
     @GetMapping("user")
     @ResponseBody
@@ -26,6 +26,18 @@ public class UserController {
     @ResponseBody
     public User findById(@PathVariable Long id){
         return service.findById(id);
+    }
+
+    @GetMapping("user/activos")
+    @ResponseBody
+    public List<User> findActivos(){
+        return service.findActivos();
+    }
+
+    @GetMapping("user/inactivos")
+    @ResponseBody
+    public List<User> findInactivos(){
+        return service.findInactivos();
     }
 
     @PostMapping("user")

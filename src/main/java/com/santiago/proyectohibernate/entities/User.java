@@ -23,7 +23,7 @@ public class User {
     @Column(length = 30)
     String apellido;
 
-    @Column(unique = true, length = 12, nullable = false)
+    @Column(unique = true, length = 20, nullable = false)
     String dni;
 
     Boolean activo;
