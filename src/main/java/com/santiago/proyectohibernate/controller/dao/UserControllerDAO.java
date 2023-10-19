@@ -1,7 +1,7 @@
-package com.santiago.proyectohibernate.controller;
+package com.santiago.proyectohibernate.controller.dao;
 
 import com.santiago.proyectohibernate.entities.User;
-import com.santiago.proyectohibernate.services.UserServiceDAO;
+import com.santiago.proyectohibernate.services.dao.UserServiceDAO;
 import lombok.RequiredArgsConstructor;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;

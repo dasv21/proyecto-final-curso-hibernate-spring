@@ -1,23 +1,23 @@
-package com.santiago.proyectohibernate.services;
+package com.santiago.proyectohibernate.services.dao;
 
+import com.santiago.proyectohibernate.dao.UserDAOImpl;
 import com.santiago.proyectohibernate.entities.User;
-import com.santiago.proyectohibernate.repositories.UserRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
 
 @Service
-public class UserServiceJPA {
+public class UserServiceDAO {
     @Autowired
-    private UserRepository repository;
+    private UserDAOImpl repository;
 
     public User create(User user) {
-        return repository.save(user);
+        return repository.create(user);
     }
 
     public User update(User user) {
-        return repository.save(user);
+        return repository.update(user);
     }
 
     public List<User> findAll() {
@@ -25,7 +25,15 @@ public class UserServiceJPA {
     }
 
     public User findById(Long id) {
-        return repository.findById(id).orElse(null);
+        return repository.findById(id);
+    }
+
+    public List<User> findActivos(){
+        return repository.findActivos();
+    }
+
+    public List<User> findInactivos(){
+        return repository.findInactivos();
     }
 
     public void deleteByID(Long id){

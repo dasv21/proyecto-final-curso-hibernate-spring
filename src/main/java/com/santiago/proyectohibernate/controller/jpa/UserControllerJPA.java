@@ -1,7 +1,7 @@
-package com.santiago.proyectohibernate.controller;
+package com.santiago.proyectohibernate.controller.jpa;
 
 import com.santiago.proyectohibernate.entities.User;
-import com.santiago.proyectohibernate.services.UserServiceJPA;
+import com.santiago.proyectohibernate.services.jpa.UserServiceJPA;
 import lombok.RequiredArgsConstructor;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
