@@ -18,32 +18,30 @@ public class UserControllerJPA {
 
     @GetMapping("user")
     @ResponseBody
-    public List<User> findAll(){
+    public List<User> findAll() {
         return service.findAll();
     }
 
     @GetMapping("user/{id}")
     @ResponseBody
-    public User findById(@PathVariable Long id){
+    public User findById(@PathVariable Long id) {
         return service.findById(id);
     }
 
     @PostMapping("user")
     @ResponseBody
-    public User create(@RequestBody User user){
+    public User create(@RequestBody User user) {
         return service.create(user);
     }
 
     @PutMapping("user")
     @ResponseBody
-    public User update(@RequestBody User user){
+    public User update(@RequestBody User user) {
         return service.update(user);
     }
 
     @DeleteMapping("user/{id}")
-    public void deleteById(@PathVariable Long id){
+    public void deleteById(@PathVariable Long id) {
         service.deleteByID(id);
     }
-
-
 }

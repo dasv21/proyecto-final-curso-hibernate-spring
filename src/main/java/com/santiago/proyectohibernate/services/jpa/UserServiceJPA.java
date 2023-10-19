@@ -28,8 +28,7 @@ public class UserServiceJPA {
         return repository.findById(id).orElse(null);
     }
 
-    public void deleteByID(Long id){
+    public void deleteByID(Long id) {
         repository.deleteById(id);
     }
-
 }

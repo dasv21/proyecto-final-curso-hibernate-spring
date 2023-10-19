@@ -14,7 +14,7 @@ public class JpaConfig {
     private EntityManagerFactory managerFactory;
 
     @Bean
-    public Session getSession(){
+    public Session getSession() {
 
         SessionFactory sessionFactory = managerFactory.unwrap(SessionFactory.class);
         return sessionFactory.openSession();

@@ -1,23 +1,23 @@
-package com.santiago.proyectohibernate.services.jpa;
+package com.santiago.proyectohibernate.services.dao;
 
+import com.santiago.proyectohibernate.dao.BillingInfoDAOImpl;
 import com.santiago.proyectohibernate.entities.BillingInfo;
-import com.santiago.proyectohibernate.repositories.BillingInfoRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
 
 @Service
-public class BillingInfoServiceJPA {
+public class BillingInfoServiceDAO {
     @Autowired
-    private BillingInfoRepository repository;
+    private BillingInfoDAOImpl repository;
 
     public BillingInfo create(BillingInfo billingInfo) {
-        return repository.save(billingInfo);
+        return repository.create(billingInfo);
     }
 
     public BillingInfo update(BillingInfo billingInfo) {
-        return repository.save(billingInfo);
+        return repository.update(billingInfo);
     }
 
     public List<BillingInfo> findAll() {
@@ -25,10 +25,10 @@ public class BillingInfoServiceJPA {
     }
 
     public BillingInfo findById(Long id) {
-        return repository.findById(id).orElse(null);
+        return repository.findById(id);
     }
 
-    public void deleteByID(Long id) {
+    public void deleteById(Long id) {
         repository.deleteById(id);
     }
 }

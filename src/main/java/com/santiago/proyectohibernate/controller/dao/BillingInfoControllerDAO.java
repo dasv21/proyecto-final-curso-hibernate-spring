@@ -1,7 +1,7 @@
-package com.santiago.proyectohibernate.controller.jpa;
+package com.santiago.proyectohibernate.controller.dao;
 
 import com.santiago.proyectohibernate.entities.BillingInfo;
-import com.santiago.proyectohibernate.services.jpa.BillingInfoServiceJPA;
+import com.santiago.proyectohibernate.services.dao.BillingInfoServiceDAO;
 import lombok.RequiredArgsConstructor;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
@@ -9,12 +9,12 @@ import org.springframework.web.bind.annotation.*;
 import java.util.List;
 
 @RestController
-@RequestMapping("/api/jpa")
+@RequestMapping("/api/dao")
 @RequiredArgsConstructor
-public class BillingInfoControllerJPA {
+public class BillingInfoControllerDAO {
 
     @Autowired
-    BillingInfoServiceJPA service;
+    BillingInfoServiceDAO service;
 
     @GetMapping("billingInfo")
     @ResponseBody
@@ -42,6 +42,6 @@ public class BillingInfoControllerJPA {
 
     @DeleteMapping("billingInfo/{id}")
     public void deleteById(@PathVariable Long id) {
-        service.deleteByID(id);
+        service.deleteById(id);
     }
 }

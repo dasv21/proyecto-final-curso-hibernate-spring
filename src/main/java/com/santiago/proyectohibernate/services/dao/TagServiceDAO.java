@@ -1,23 +1,23 @@
-package com.santiago.proyectohibernate.services.jpa;
+package com.santiago.proyectohibernate.services.dao;
 
+import com.santiago.proyectohibernate.dao.TagDAOImpl;
 import com.santiago.proyectohibernate.entities.Tag;
-import com.santiago.proyectohibernate.repositories.TagRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
 
 @Service
-public class TagServiceJPA {
+public class TagServiceDAO {
     @Autowired
-    private TagRepository repository;
+    private TagDAOImpl repository;
 
     public Tag create(Tag tag) {
-        return repository.save(tag);
+        return repository.create(tag);
     }
 
     public Tag update(Tag tag) {
-        return repository.save(tag);
+        return repository.update(tag);
     }
 
     public List<Tag> findAll() {
@@ -25,10 +25,10 @@ public class TagServiceJPA {
     }
 
     public Tag findById(Long id) {
-        return repository.findById(id).orElse(null);
+        return repository.findById(id);
     }
 
-    public void deleteByID(Long id) {
+    public void deleteById(Long id) {
         repository.deleteById(id);
     }
 }

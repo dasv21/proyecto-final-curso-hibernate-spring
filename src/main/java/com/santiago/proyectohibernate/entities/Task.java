@@ -7,7 +7,7 @@ import lombok.Data;
 import lombok.NoArgsConstructor;
 
 import java.time.LocalDate;
-import java.util.ArrayList;
+import java.util.List;
 
 @Entity
 @Data
@@ -31,6 +31,8 @@ public class Task {
     @Column(name = "fecha_entrega")
     private LocalDate fechaEntrega;
 
-    @ManyToMany
-    private ArrayList<Tag> etiquetas;
+    // --------- Asociaciones ---------
+
+    @ManyToMany(cascade = CascadeType.ALL)
+    private List<Tag> etiquetas;
 }

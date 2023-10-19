@@ -22,6 +22,4 @@ public class Tag {
 
     @Enumerated(EnumType.STRING)
     private TagColor color;
-
-
 }
