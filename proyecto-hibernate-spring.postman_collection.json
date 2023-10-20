@@ -1,0 +1,1027 @@
+{
+  "info": {
+    "_postman_id": "098b8c92-491d-405d-92aa-415bd7813bf1",
+    "name": "proyecto-hibernate-spring",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+  },
+  "item": [
+    {
+      "name": "jpa",
+      "item": [
+        {
+          "name": "user",
+          "item": [
+            {
+              "name": "listar todos",
+              "request": {
+                "method": "GET",
+                "header": [],
+                "url": {
+                  "raw": "http://localhost:8080/api/jpa/user",
+                  "protocol": "http",
+                  "host": [
+                    "localhost"
+                  ],
+                  "port": "8080",
+                  "path": [
+                    "api",
+                    "jpa",
+                    "user"
+                  ]
+                }
+              },
+              "response": []
+            },
+            {
+              "name": "listar por id",
+              "request": {
+                "method": "GET",
+                "header": [],
+                "url": {
+                  "raw": "http://localhost:8080/api/jpa/user/8",
+                  "protocol": "http",
+                  "host": [
+                    "localhost"
+                  ],
+                  "port": "8080",
+                  "path": [
+                    "api",
+                    "jpa",
+                    "user",
+                    "8"
+                  ]
+                }
+              },
+              "response": []
+            },
+            {
+              "name": "crear",
+              "request": {
+                "method": "POST",
+                "header": [],
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\r\n    \"nombre\": \"prueba\",\r\n    \"apellido\": \"jpa\",\r\n    \"dni\": \"6437889\",\r\n    \"activo\": false,\r\n    \"fechaNacimiento\": \"1997-07-12\",\r\n    \"tareas\": [],\r\n    \"billingInfo\": null\r\n}\r\n",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                },
+                "url": {
+                  "raw": "http://localhost:8080/api/dao/user",
+                  "protocol": "http",
+                  "host": [
+                    "localhost"
+                  ],
+                  "port": "8080",
+                  "path": [
+                    "api",
+                    "dao",
+                    "user"
+                  ]
+                }
+              },
+              "response": []
+            },
+            {
+              "name": "editar",
+              "request": {
+                "method": "PUT",
+                "header": [],
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\r\n    \"id\": 6,\r\n    \"nombre\": \"luis\",\r\n    \"apellido\": \"update jpa\",\r\n    \"dni\": \"4314760\",\r\n    \"activo\": true,\r\n    \"fechaNacimiento\": \"1952-05-22\",\r\n    \"tareas\": [],\r\n    \"billingInfo\": null\r\n}",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                },
+                "url": {
+                  "raw": "http://localhost:8080/api/jpa/user",
+                  "protocol": "http",
+                  "host": [
+                    "localhost"
+                  ],
+                  "port": "8080",
+                  "path": [
+                    "api",
+                    "jpa",
+                    "user"
+                  ]
+                }
+              },
+              "response": []
+            },
+            {
+              "name": "borrar por id",
+              "request": {
+                "method": "DELETE",
+                "header": [],
+                "url": {
+                  "raw": "http://localhost:8080/api/jpa/user/13",
+                  "protocol": "http",
+                  "host": [
+                    "localhost"
+                  ],
+                  "port": "8080",
+                  "path": [
+                    "api",
+                    "jpa",
+                    "user",
+                    "13"
+                  ]
+                }
+              },
+              "response": []
+            },
+            {
+              "name": "crear con asociaciones",
+              "request": {
+                "method": "POST",
+                "header": [],
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\r\n    \"nombre\": \"david\",\r\n    \"apellido\": \"developer\",\r\n    \"dni\": \"1234999931\",\r\n    \"activo\": true,\r\n    \"fechaNacimiento\": \"1996-02-12\",\r\n    \"tareas\": [\r\n        {\r\n            \"titulo\": \"Proyecto hibernate\",\r\n            \"descripcion\": \"crear proyecto final para el curso de hibernate\",\r\n            \"finalizada\": true,\r\n            \"fechaEntrega\": \"2023-12-12\",\r\n            \"etiquetas\": [\r\n                {\r\n                    \"nombre\": \"Listo\",\r\n                    \"color\": \"GREEN\"\r\n                }\r\n            ]\r\n        }\r\n    ],\r\n    \"billingInfo\": {\r\n        \"descripcion\": \"descripcion de la facturacion\"\r\n    }\r\n}\r\n",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                },
+                "url": {
+                  "raw": "http://localhost:8080/api/jpa/user",
+                  "protocol": "http",
+                  "host": [
+                    "localhost"
+                  ],
+                  "port": "8080",
+                  "path": [
+                    "api",
+                    "jpa",
+                    "user"
+                  ]
+                }
+              },
+              "response": []
+            }
+          ]
+        },
+        {
+          "name": "task",
+          "item": [
+            {
+              "name": "listar todos",
+              "request": {
+                "method": "GET",
+                "header": [],
+                "url": {
+                  "raw": "http://localhost:8080/api/jpa/task",
+                  "protocol": "http",
+                  "host": [
+                    "localhost"
+                  ],
+                  "port": "8080",
+                  "path": [
+                    "api",
+                    "jpa",
+                    "task"
+                  ]
+                }
+              },
+              "response": []
+            },
+            {
+              "name": "listar por id",
+              "request": {
+                "method": "GET",
+                "header": [],
+                "url": {
+                  "raw": "http://localhost:8080/api/jpa/task/1",
+                  "protocol": "http",
+                  "host": [
+                    "localhost"
+                  ],
+                  "port": "8080",
+                  "path": [
+                    "api",
+                    "jpa",
+                    "task",
+                    "1"
+                  ]
+                }
+              },
+              "response": []
+            },
+            {
+              "name": "crear",
+              "request": {
+                "method": "POST",
+                "header": [],
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\r\n    \"titulo\": \"Prueba postman\",\r\n    \"descripcion\": \"crear tarea individual\",\r\n    \"finalizada\": false,\r\n    \"fechaEntrega\": \"2023-12-12\",\r\n    \"etiquetas\": [\r\n        {\r\n            \"nombre\": \"proceso\",\r\n            \"color\": \"RED\"\r\n        }\r\n    ]\r\n}",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                },
+                "url": {
+                  "raw": "http://localhost:8080/api/jpa/task",
+                  "protocol": "http",
+                  "host": [
+                    "localhost"
+                  ],
+                  "port": "8080",
+                  "path": [
+                    "api",
+                    "jpa",
+                    "task"
+                  ]
+                }
+              },
+              "response": []
+            },
+            {
+              "name": "editar",
+              "request": {
+                "method": "PUT",
+                "header": [],
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\r\n    \"id\": 1,\r\n    \"titulo\": \"Proyecto hibernate\",\r\n    \"descripcion\": \"prueba de update\",\r\n    \"finalizada\": true,\r\n    \"fechaEntrega\": \"2023-12-12\",\r\n    \"etiquetas\": [\r\n        {\r\n            \"id\":1,\r\n            \"nombre\": \"Listo\",\r\n            \"color\": \"GREEN\"\r\n        }\r\n    ]\r\n}",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                },
+                "url": {
+                  "raw": "http://localhost:8080/api/jpa/task",
+                  "protocol": "http",
+                  "host": [
+                    "localhost"
+                  ],
+                  "port": "8080",
+                  "path": [
+                    "api",
+                    "jpa",
+                    "task"
+                  ]
+                }
+              },
+              "response": []
+            }
+          ]
+        },
+        {
+          "name": "tag",
+          "item": [
+            {
+              "name": "listar todos",
+              "request": {
+                "method": "GET",
+                "header": [],
+                "url": {
+                  "raw": "http://localhost:8080/api/jpa/tag",
+                  "protocol": "http",
+                  "host": [
+                    "localhost"
+                  ],
+                  "port": "8080",
+                  "path": [
+                    "api",
+                    "jpa",
+                    "tag"
+                  ]
+                }
+              },
+              "response": []
+            },
+            {
+              "name": "listar por id",
+              "request": {
+                "method": "GET",
+                "header": [],
+                "url": {
+                  "raw": "http://localhost:8080/api/jpa/tag/1",
+                  "protocol": "http",
+                  "host": [
+                    "localhost"
+                  ],
+                  "port": "8080",
+                  "path": [
+                    "api",
+                    "jpa",
+                    "tag",
+                    "1"
+                  ]
+                }
+              },
+              "response": []
+            },
+            {
+              "name": "crear",
+              "request": {
+                "method": "POST",
+                "header": [],
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\r\n    \"nombre\": \"prieba\",\r\n    \"color\": \"GREEN\"\r\n}",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                },
+                "url": {
+                  "raw": "http://localhost:8080/api/jpa/tag",
+                  "protocol": "http",
+                  "host": [
+                    "localhost"
+                  ],
+                  "port": "8080",
+                  "path": [
+                    "api",
+                    "jpa",
+                    "tag"
+                  ]
+                }
+              },
+              "response": []
+            },
+            {
+              "name": "editar",
+              "request": {
+                "method": "PUT",
+                "header": [],
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\r\n    \"id\": 1,\r\n    \"nombre\": \"Listo\",\r\n    \"color\": \"BLUE\"\r\n}",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                },
+                "url": {
+                  "raw": "http://localhost:8080/api/jpa/tag",
+                  "protocol": "http",
+                  "host": [
+                    "localhost"
+                  ],
+                  "port": "8080",
+                  "path": [
+                    "api",
+                    "jpa",
+                    "tag"
+                  ]
+                }
+              },
+              "response": []
+            }
+          ]
+        },
+        {
+          "name": "billingInfo",
+          "item": [
+            {
+              "name": "listar todos",
+              "request": {
+                "method": "GET",
+                "header": [],
+                "url": {
+                  "raw": "http://localhost:8080/api/jpa/billingInfo",
+                  "protocol": "http",
+                  "host": [
+                    "localhost"
+                  ],
+                  "port": "8080",
+                  "path": [
+                    "api",
+                    "jpa",
+                    "billingInfo"
+                  ]
+                }
+              },
+              "response": []
+            },
+            {
+              "name": "listar por id",
+              "request": {
+                "method": "GET",
+                "header": [],
+                "url": {
+                  "raw": "http://localhost:8080/api/jpa/billingInfo/1",
+                  "protocol": "http",
+                  "host": [
+                    "localhost"
+                  ],
+                  "port": "8080",
+                  "path": [
+                    "api",
+                    "jpa",
+                    "billingInfo",
+                    "1"
+                  ]
+                }
+              },
+              "response": []
+            },
+            {
+              "name": "crear",
+              "request": {
+                "method": "POST",
+                "header": [],
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\r\n    \"descripcion\": \"descripcion de la facturacion creado desde postman\"\r\n}",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                },
+                "url": {
+                  "raw": "http://localhost:8080/api/jpa/billingInfo",
+                  "protocol": "http",
+                  "host": [
+                    "localhost"
+                  ],
+                  "port": "8080",
+                  "path": [
+                    "api",
+                    "jpa",
+                    "billingInfo"
+                  ]
+                }
+              },
+              "response": []
+            },
+            {
+              "name": "editar",
+              "request": {
+                "method": "PUT",
+                "header": [],
+                "body": {
+                  "mode": "raw",
+                  "raw": "[\r\n    {\r\n        \"id\": 1,\r\n        \"descripcion\": \"descripcion update\"\r\n    }\r\n]",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                },
+                "url": {
+                  "raw": "http://localhost:8080/api/jpa/tag",
+                  "protocol": "http",
+                  "host": [
+                    "localhost"
+                  ],
+                  "port": "8080",
+                  "path": [
+                    "api",
+                    "jpa",
+                    "tag"
+                  ]
+                }
+              },
+              "response": []
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "dao",
+      "item": [
+        {
+          "name": "user",
+          "item": [
+            {
+              "name": "listar todos",
+              "request": {
+                "method": "GET",
+                "header": [],
+                "url": {
+                  "raw": "http://localhost:8080/api/dao/user",
+                  "protocol": "http",
+                  "host": [
+                    "localhost"
+                  ],
+                  "port": "8080",
+                  "path": [
+                    "api",
+                    "dao",
+                    "user"
+                  ]
+                }
+              },
+              "response": []
+            },
+            {
+              "name": "listar por id",
+              "request": {
+                "method": "GET",
+                "header": [],
+                "url": {
+                  "raw": "http://localhost:8080/api/dao/user/5",
+                  "protocol": "http",
+                  "host": [
+                    "localhost"
+                  ],
+                  "port": "8080",
+                  "path": [
+                    "api",
+                    "dao",
+                    "user",
+                    "5"
+                  ]
+                }
+              },
+              "response": []
+            },
+            {
+              "name": "listar activos",
+              "request": {
+                "method": "GET",
+                "header": [],
+                "url": {
+                  "raw": "http://localhost:8080/api/dao/user/activos",
+                  "protocol": "http",
+                  "host": [
+                    "localhost"
+                  ],
+                  "port": "8080",
+                  "path": [
+                    "api",
+                    "dao",
+                    "user",
+                    "activos"
+                  ]
+                }
+              },
+              "response": []
+            },
+            {
+              "name": "listar inactivos",
+              "request": {
+                "method": "GET",
+                "header": [],
+                "url": {
+                  "raw": "http://localhost:8080/api/dao/user/inactivos",
+                  "protocol": "http",
+                  "host": [
+                    "localhost"
+                  ],
+                  "port": "8080",
+                  "path": [
+                    "api",
+                    "dao",
+                    "user",
+                    "inactivos"
+                  ]
+                }
+              },
+              "response": []
+            },
+            {
+              "name": "crear",
+              "request": {
+                "method": "POST",
+                "header": [],
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\r\n    \"nombre\": \"prueba5\",\r\n    \"apellido\": \"carga4\",\r\n    \"dni\": \"11122335\",\r\n    \"activo\": false,\r\n    \"fechaNacimiento\": \"1997-07-12\",\r\n    \"tareas\": [],\r\n    \"billingInfo\": null\r\n}\r\n",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                },
+                "url": {
+                  "raw": "http://localhost:8080/api/dao/user",
+                  "protocol": "http",
+                  "host": [
+                    "localhost"
+                  ],
+                  "port": "8080",
+                  "path": [
+                    "api",
+                    "dao",
+                    "user"
+                  ]
+                }
+              },
+              "response": []
+            },
+            {
+              "name": "editar",
+              "request": {
+                "method": "PUT",
+                "header": [],
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\r\n    \"id\": 5,\r\n    \"nombre\": \"carmen\",\r\n    \"apellido\": \"update dao\",\r\n    \"dni\": \"5350608\",\r\n    \"activo\": true,\r\n    \"fechaNacimiento\": \"1955-05-25\",\r\n    \"tareas\": [],\r\n    \"billingInfo\": null\r\n}",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                },
+                "url": {
+                  "raw": "http://localhost:8080/api/dao/user",
+                  "protocol": "http",
+                  "host": [
+                    "localhost"
+                  ],
+                  "port": "8080",
+                  "path": [
+                    "api",
+                    "dao",
+                    "user"
+                  ]
+                }
+              },
+              "response": []
+            },
+            {
+              "name": "borrar por id",
+              "request": {
+                "method": "DELETE",
+                "header": [],
+                "url": {
+                  "raw": "http://localhost:8080/api/dao/user/12",
+                  "protocol": "http",
+                  "host": [
+                    "localhost"
+                  ],
+                  "port": "8080",
+                  "path": [
+                    "api",
+                    "dao",
+                    "user",
+                    "12"
+                  ]
+                }
+              },
+              "response": []
+            },
+            {
+              "name": "crear con asociaciones",
+              "request": {
+                "method": "DELETE",
+                "header": [],
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\r\n    \"nombre\": \"david\",\r\n    \"apellido\": \"developer\",\r\n    \"dni\": \"12345423345\",\r\n    \"activo\": true,\r\n    \"fechaNacimiento\": \"1996-02-12\",\r\n    \"tareas\": [\r\n        {\r\n            \"titulo\": \"Proyecto hibernate\",\r\n            \"descripcion\": \"crear proyecto final para el curso de hibernate\",\r\n            \"finalizada\": true,\r\n            \"fechaEntrega\": \"2023-12-12\",\r\n            \"etiquetas\": [\r\n                {\r\n                    \"nombre\": \"Listo\",\r\n                    \"color\": \"GREEN\"\r\n                }\r\n            ]\r\n        }\r\n    ],\r\n    \"billingInfo\": {\r\n        \"descripcion\": \"descripcion de la facturacion\"\r\n    }\r\n}\r\n"
+                },
+                "url": {
+                  "raw": "http://localhost:8080/api/jpa/user/13",
+                  "protocol": "http",
+                  "host": [
+                    "localhost"
+                  ],
+                  "port": "8080",
+                  "path": [
+                    "api",
+                    "jpa",
+                    "user",
+                    "13"
+                  ]
+                }
+              },
+              "response": []
+            }
+          ]
+        },
+        {
+          "name": "task",
+          "item": [
+            {
+              "name": "listar todos",
+              "request": {
+                "method": "GET",
+                "header": [],
+                "url": {
+                  "raw": "http://localhost:8080/api/dao/task",
+                  "protocol": "http",
+                  "host": [
+                    "localhost"
+                  ],
+                  "port": "8080",
+                  "path": [
+                    "api",
+                    "dao",
+                    "task"
+                  ]
+                }
+              },
+              "response": []
+            },
+            {
+              "name": "listar por id",
+              "request": {
+                "method": "GET",
+                "header": [],
+                "url": {
+                  "raw": "http://localhost:8080/api/dao/task/1",
+                  "protocol": "http",
+                  "host": [
+                    "localhost"
+                  ],
+                  "port": "8080",
+                  "path": [
+                    "api",
+                    "dao",
+                    "task",
+                    "1"
+                  ]
+                }
+              },
+              "response": []
+            },
+            {
+              "name": "crear",
+              "request": {
+                "method": "POST",
+                "header": [],
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\r\n    \"titulo\": \"Prueba postman\",\r\n    \"descripcion\": \"crear tarea individual\",\r\n    \"finalizada\": false,\r\n    \"fechaEntrega\": \"2023-12-12\",\r\n    \"etiquetas\": [\r\n        {\r\n            \"nombre\": \"proceso\",\r\n            \"color\": \"RED\"\r\n        }\r\n    ]\r\n}",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                },
+                "url": {
+                  "raw": "http://localhost:8080/api/dao/task",
+                  "protocol": "http",
+                  "host": [
+                    "localhost"
+                  ],
+                  "port": "8080",
+                  "path": [
+                    "api",
+                    "dao",
+                    "task"
+                  ]
+                }
+              },
+              "response": []
+            },
+            {
+              "name": "editar",
+              "request": {
+                "method": "PUT",
+                "header": [],
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\r\n    \"id\": 1,\r\n    \"titulo\": \"Proyecto hibernate\",\r\n    \"descripcion\": \"prueba de update\",\r\n    \"finalizada\": true,\r\n    \"fechaEntrega\": \"2023-12-12\",\r\n    \"etiquetas\": [\r\n        {\r\n            \"id\":1,\r\n            \"nombre\": \"Listo\",\r\n            \"color\": \"GREEN\"\r\n        }\r\n    ]\r\n}",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                },
+                "url": {
+                  "raw": "http://localhost:8080/api/dao/task",
+                  "protocol": "http",
+                  "host": [
+                    "localhost"
+                  ],
+                  "port": "8080",
+                  "path": [
+                    "api",
+                    "dao",
+                    "task"
+                  ]
+                }
+              },
+              "response": []
+            }
+          ]
+        },
+        {
+          "name": "tag",
+          "item": [
+            {
+              "name": "listar todos",
+              "request": {
+                "method": "GET",
+                "header": [],
+                "url": {
+                  "raw": "http://localhost:8080/api/dao/tag",
+                  "protocol": "http",
+                  "host": [
+                    "localhost"
+                  ],
+                  "port": "8080",
+                  "path": [
+                    "api",
+                    "dao",
+                    "tag"
+                  ]
+                }
+              },
+              "response": []
+            },
+            {
+              "name": "listar por id",
+              "request": {
+                "method": "GET",
+                "header": [],
+                "url": {
+                  "raw": "http://localhost:8080/api/dao/tag/1",
+                  "protocol": "http",
+                  "host": [
+                    "localhost"
+                  ],
+                  "port": "8080",
+                  "path": [
+                    "api",
+                    "dao",
+                    "tag",
+                    "1"
+                  ]
+                }
+              },
+              "response": []
+            },
+            {
+              "name": "crear",
+              "request": {
+                "method": "POST",
+                "header": [],
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\r\n    \"nombre\": \"prieba\",\r\n    \"color\": \"GREEN\"\r\n}",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                },
+                "url": {
+                  "raw": "http://localhost:8080/api/dao/tag",
+                  "protocol": "http",
+                  "host": [
+                    "localhost"
+                  ],
+                  "port": "8080",
+                  "path": [
+                    "api",
+                    "dao",
+                    "tag"
+                  ]
+                }
+              },
+              "response": []
+            },
+            {
+              "name": "editar",
+              "request": {
+                "method": "PUT",
+                "header": [],
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\r\n    \"id\": 1,\r\n    \"nombre\": \"Listo\",\r\n    \"color\": \"BLUE\"\r\n}",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                },
+                "url": {
+                  "raw": "http://localhost:8080/api/dao/tag",
+                  "protocol": "http",
+                  "host": [
+                    "localhost"
+                  ],
+                  "port": "8080",
+                  "path": [
+                    "api",
+                    "dao",
+                    "tag"
+                  ]
+                }
+              },
+              "response": []
+            }
+          ]
+        },
+        {
+          "name": "billingInfo",
+          "item": [
+            {
+              "name": "listar todos",
+              "request": {
+                "method": "GET",
+                "header": [],
+                "url": {
+                  "raw": "http://localhost:8080/api/dao/billingInfo",
+                  "protocol": "http",
+                  "host": [
+                    "localhost"
+                  ],
+                  "port": "8080",
+                  "path": [
+                    "api",
+                    "dao",
+                    "billingInfo"
+                  ]
+                }
+              },
+              "response": []
+            },
+            {
+              "name": "listar por id",
+              "request": {
+                "method": "GET",
+                "header": [],
+                "url": {
+                  "raw": "http://localhost:8080/api/dao/billingInfo/1",
+                  "protocol": "http",
+                  "host": [
+                    "localhost"
+                  ],
+                  "port": "8080",
+                  "path": [
+                    "api",
+                    "dao",
+                    "billingInfo",
+                    "1"
+                  ]
+                }
+              },
+              "response": []
+            },
+            {
+              "name": "crear",
+              "request": {
+                "method": "POST",
+                "header": [],
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\r\n    \"descripcion\": \"descripcion de la facturacion creado desde postman\"\r\n}",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                },
+                "url": {
+                  "raw": "http://localhost:8080/api/dao/billingInfo",
+                  "protocol": "http",
+                  "host": [
+                    "localhost"
+                  ],
+                  "port": "8080",
+                  "path": [
+                    "api",
+                    "dao",
+                    "billingInfo"
+                  ]
+                }
+              },
+              "response": []
+            },
+            {
+              "name": "editar",
+              "request": {
+                "method": "PUT",
+                "header": [],
+                "body": {
+                  "mode": "raw",
+                  "raw": "[\r\n    {\r\n        \"id\": 1,\r\n        \"descripcion\": \"descripcion update\"\r\n    }\r\n]",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                },
+                "url": {
+                  "raw": "http://localhost:8080/api/dao/tag",
+                  "protocol": "http",
+                  "host": [
+                    "localhost"
+                  ],
+                  "port": "8080",
+                  "path": [
+                    "api",
+                    "dao",
+                    "tag"
+                  ]
+                }
+              },
+              "response": []
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

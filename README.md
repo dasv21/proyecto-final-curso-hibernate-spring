@@ -16,11 +16,16 @@ Asignación de tareas: el usuario puede crear, editar y eliminar tareas. Cada ta
 Información de facturación: el usuario puede ver su historial de facturación.
 
 ## Instalación
+
 Para instalar el proyecto, sigue estos pasos:
 
 Descarga el proyecto desde GitHub.
 Crea un snapshot de Maven.
 Instala MySQL 8.0 o superior.
 
+Se pueden hacer pruebas desde postman importando el archivo postman que esta en la raiz del proyecto
+
 ## Contacto
-Si tienes alguna pregunta o problema, puedes ponerte en contacto con el autor del proyecto en su [Correo electrónico](mailto:davidsantiago434@gmail.com) .
+
+Si tienes alguna pregunta o problema, puedes ponerte en contacto con el autor del proyecto en
+su [Correo electrónico](mailto:davidsantiago434@gmail.com) .
