@@ -1,6 +1,6 @@
-# Proyecto de gestión de usuarios
+# Proyecto final de Hibernate y Spring
 
-Este proyecto es una aplicación web de gestión de usuarios que utiliza las siguientes tecnologías:
+Este proyecto es el proyecto final del curso de Hibernate y Spring de David Santiago. Se trata de una aplicación web que gestiona usuarios, tareas y facturación que utiliza las siguientes tecnologías:
 
 * Java
 * Spring Boot
@@ -10,10 +10,17 @@ Este proyecto es una aplicación web de gestión de usuarios que utiliza las sig
 * Spring DevTools
 * Spring Web
 
-El proyecto permite crear usuarios, asignarles tareas y generar facturas.
+## Características
+Gestión de usuarios: el usuario puede crear, editar y eliminar su cuenta.
+Asignación de tareas: el usuario puede crear, editar y eliminar tareas. Cada tarea tiene una lista de etiquetas.
+Información de facturación: el usuario puede ver su historial de facturación.
 
-## Descripción
+## Instalación
+Para instalar el proyecto, sigue estos pasos:
 
-Este proyecto es una aplicación web que permite a los usuarios crear cuentas, iniciar sesión, ver sus perfiles y
-asignarse tareas. Las tareas se pueden crear y asignar a los usuarios desde la interfaz web. La aplicación también
-genera facturas para los usuarios según las tareas que hayan completado.
+Descarga el proyecto desde GitHub.
+Crea un snapshot de Maven.
+Instala MySQL 8.0 o superior.
+
+## Contacto
+Si tienes alguna pregunta o problema, puedes ponerte en contacto con el autor del proyecto en su [Correo electrónico](mailto:davidsantiago434@gmail.com) .
