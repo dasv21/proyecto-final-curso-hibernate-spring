@@ -59,14 +59,14 @@ public class UserDAOImpl implements UserDAO {
     }
 
     @Override
-    public List<User> findActivos() {
+    public List<User> findActive() {
 
         // 1. criteria
         CriteriaBuilder builder = session.getCriteriaBuilder();
         CriteriaQuery<User> criteria = builder.createQuery(User.class);
         Root<User> root = criteria.from(User.class);
 
-        Predicate filter = builder.equal(root.get("activo"), true);
+        Predicate filter = builder.equal(root.get("active"), true);
 
         criteria.select(root).where(filter);
 
@@ -77,14 +77,14 @@ public class UserDAOImpl implements UserDAO {
     }
 
     @Override
-    public List<User> findInactivos() {
+    public List<User> findInactive() {
 
         // 1. criteria
         CriteriaBuilder builder = session.getCriteriaBuilder();
         CriteriaQuery<User> criteria = builder.createQuery(User.class);
         Root<User> root = criteria.from(User.class);
 
-        Predicate filter = builder.equal(root.get("activo"), false);
+        Predicate filter = builder.equal(root.get("active"), false);
 
         criteria.select(root).where(filter);
 

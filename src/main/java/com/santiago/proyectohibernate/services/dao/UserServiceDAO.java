@@ -28,12 +28,12 @@ public class UserServiceDAO {
         return repository.findById(id);
     }
 
-    public List<User> findActivos() {
-        return repository.findActivos();
+    public List<User> findActive() {
+        return repository.findActive();
     }
 
-    public List<User> findInactivos() {
-        return repository.findInactivos();
+    public List<User> findInactive() {
+        return repository.findInactive();
     }
 
     public void deleteById(Long id) {

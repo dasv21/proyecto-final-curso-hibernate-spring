@@ -1,7 +1,10 @@
 package com.santiago.proyectohibernate.entities;
 
 import jakarta.persistence.*;
-import lombok.*;
+import lombok.AllArgsConstructor;
+import lombok.Builder;
+import lombok.Data;
+import lombok.NoArgsConstructor;
 
 import java.time.LocalDate;
 import java.util.List;
@@ -17,24 +20,24 @@ public class User {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
-    @Column(length = 30)
-    String nombre;
+    @Column(name = "first_name", length = 30, nullable = false)
+    String firstName;
 
-    @Column(length = 30)
-    String apellido;
+    @Column(name = "last_name", length = 30)
+    String lastName;
 
     @Column(unique = true, length = 20, nullable = false)
     String dni;
 
-    Boolean activo;
+    Boolean active;
 
-    @Column(name = "fecha_nacimiento")
-    LocalDate fechaNacimiento;
+    @Column(name = "birth_date")
+    LocalDate birthDate;
 
     // --------- Asociaciones ---------
 
     @OneToMany(cascade = CascadeType.ALL)
-    private List<Task> tareas;
+    private List<Task> tasks;
 
     @OneToOne(cascade = CascadeType.ALL)
     private BillingInfo billingInfo;

@@ -14,9 +14,9 @@ public interface UserDAO {
 
     User findById(Long id);
 
-    List<User> findActivos();
+    List<User> findActive();
 
-    List<User> findInactivos();
+    List<User> findInactive();
 
     Boolean deleteById(Long id);
 }

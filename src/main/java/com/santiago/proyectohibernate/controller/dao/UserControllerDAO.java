@@ -28,16 +28,16 @@ public class UserControllerDAO {
         return service.findById(id);
     }
 
-    @GetMapping("user/activos")
+    @GetMapping("user/active")
     @ResponseBody
-    public List<User> findActivos() {
-        return service.findActivos();
+    public List<User> findActive() {
+        return service.findActive();
     }
 
-    @GetMapping("user/inactivos")
+    @GetMapping("user/inactive")
     @ResponseBody
-    public List<User> findInactivos() {
-        return service.findInactivos();
+    public List<User> findInactive() {
+        return service.findInactive();
     }
 
     @PostMapping("user")

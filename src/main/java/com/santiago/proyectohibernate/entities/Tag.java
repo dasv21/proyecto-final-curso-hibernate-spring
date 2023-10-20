@@ -18,7 +18,7 @@ public class Tag {
     private Long id;
 
     @Column(length = 30)
-    String nombre;
+    String name;
 
     @Enumerated(EnumType.STRING)
     private TagColor color;

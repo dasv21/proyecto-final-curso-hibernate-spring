@@ -21,18 +21,18 @@ public class Task {
     private Long id;
 
     @Column(length = 60)
-    private String titulo;
+    private String title;
 
     @Column(length = 200)
-    private String descripcion;
+    private String description;
 
-    private Boolean finalizada;
+    private Boolean finish;
 
-    @Column(name = "fecha_entrega")
-    private LocalDate fechaEntrega;
+    @Column(name = "finish_date")
+    private LocalDate finishDate;
 
     // --------- Asociaciones ---------
 
     @ManyToMany(cascade = CascadeType.ALL)
-    private List<Tag> etiquetas;
+    private List<Tag> tags;
 }
