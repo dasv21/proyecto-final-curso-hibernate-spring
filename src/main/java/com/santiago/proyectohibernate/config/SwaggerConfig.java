@@ -23,6 +23,4 @@ public class SwaggerConfig {
                                 .url("http://www.github.com/dasv21"))
                         .license(new License().name("MIT").url("http://springdoc.arg")));
     }
-
-
 }

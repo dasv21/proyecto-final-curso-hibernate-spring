@@ -26,7 +26,4 @@ public class BillingInfo {
     private String city;
 
     private String country;
-
-    @OneToOne(mappedBy = "billingInfo")
-    private User user;
 }
