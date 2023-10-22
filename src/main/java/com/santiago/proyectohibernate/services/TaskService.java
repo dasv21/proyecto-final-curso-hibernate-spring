@@ -1,4 +1,4 @@
-package com.santiago.proyectohibernate.services.jpa;
+package com.santiago.proyectohibernate.services;
 
 import com.santiago.proyectohibernate.entities.Task;
 import com.santiago.proyectohibernate.repositories.TaskRepository;
@@ -8,7 +8,7 @@ import org.springframework.stereotype.Service;
 import java.util.List;
 
 @Service
-public class TaskServiceJPA {
+public class TaskService {
     @Autowired
     private TaskRepository repository;
 

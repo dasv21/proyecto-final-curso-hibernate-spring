@@ -1,4 +1,4 @@
-package com.santiago.proyectohibernate.services.jpa;
+package com.santiago.proyectohibernate.services;
 
 import com.santiago.proyectohibernate.entities.BillingInfo;
 import com.santiago.proyectohibernate.repositories.BillingInfoRepository;
@@ -8,7 +8,7 @@ import org.springframework.stereotype.Service;
 import java.util.List;
 
 @Service
-public class BillingInfoServiceJPA {
+public class BillingInfoService {
     @Autowired
     private BillingInfoRepository repository;
 

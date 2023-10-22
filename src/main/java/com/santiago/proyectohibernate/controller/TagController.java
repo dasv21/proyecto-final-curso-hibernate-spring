@@ -1,7 +1,7 @@
-package com.santiago.proyectohibernate.controller.dao;
+package com.santiago.proyectohibernate.controller;
 
 import com.santiago.proyectohibernate.entities.Tag;
-import com.santiago.proyectohibernate.services.dao.TagServiceDAO;
+import com.santiago.proyectohibernate.services.TagService;
 import lombok.RequiredArgsConstructor;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
@@ -9,12 +9,12 @@ import org.springframework.web.bind.annotation.*;
 import java.util.List;
 
 @RestController
-@RequestMapping("/api/dao")
+@RequestMapping("/api/jpa")
 @RequiredArgsConstructor
-public class TagControllerDAO {
+public class TagController {
 
     @Autowired
-    TagServiceDAO service;
+    TagService service;
 
     @GetMapping("tag")
     @ResponseBody
@@ -42,6 +42,6 @@ public class TagControllerDAO {
 
     @DeleteMapping("tag/{id}")
     public void deleteById(@PathVariable Long id) {
-        service.deleteById(id);
+        service.deleteByID(id);
     }
 }

@@ -4,9 +4,9 @@ import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 @SpringBootApplication
-public class ProyectoHibernateApplication {
+public class HibernateApp {
 
     public static void main(String[] args) {
-        SpringApplication.run(ProyectoHibernateApplication.class, args);
+        SpringApplication.run(HibernateApp.class, args);
     }
 }

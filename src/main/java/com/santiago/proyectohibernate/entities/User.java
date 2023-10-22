@@ -41,5 +41,4 @@ public class User {
 
     @OneToOne(cascade = CascadeType.ALL)
     private BillingInfo billingInfo;
-
 }

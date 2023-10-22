@@ -1,4 +1,4 @@
-package com.santiago.proyectohibernate.services.jpa;
+package com.santiago.proyectohibernate.services;
 
 import com.santiago.proyectohibernate.entities.User;
 import com.santiago.proyectohibernate.repositories.UserRepository;
@@ -8,7 +8,7 @@ import org.springframework.stereotype.Service;
 import java.util.List;
 
 @Service
-public class UserServiceJPA {
+public class UserService {
     @Autowired
     private UserRepository repository;
 
@@ -22,6 +22,14 @@ public class UserServiceJPA {
 
     public List<User> findAll() {
         return repository.findAll();
+    }
+
+    public List<User> findActive() {
+        return repository.findByActiveTrue();
+    }
+
+    public List<User> findInactive() {
+        return repository.findByActiveFalse();
     }
 
     public User findById(Long id) {

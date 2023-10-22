@@ -1,4 +1,4 @@
-package com.santiago.proyectohibernate.services.jpa;
+package com.santiago.proyectohibernate.services;
 
 import com.santiago.proyectohibernate.entities.Tag;
 import com.santiago.proyectohibernate.repositories.TagRepository;
@@ -8,7 +8,7 @@ import org.springframework.stereotype.Service;
 import java.util.List;
 
 @Service
-public class TagServiceJPA {
+public class TagService {
     @Autowired
     private TagRepository repository;
 

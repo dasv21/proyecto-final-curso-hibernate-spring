@@ -1,7 +1,7 @@
-package com.santiago.proyectohibernate.controller.dao;
+package com.santiago.proyectohibernate.controller;
 
 import com.santiago.proyectohibernate.entities.User;
-import com.santiago.proyectohibernate.services.dao.UserServiceDAO;
+import com.santiago.proyectohibernate.services.UserService;
 import lombok.RequiredArgsConstructor;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
@@ -9,23 +9,17 @@ import org.springframework.web.bind.annotation.*;
 import java.util.List;
 
 @RestController
-@RequestMapping("/api/dao")
+@RequestMapping("/api/jpa")
 @RequiredArgsConstructor
-public class UserControllerDAO {
+public class UserController {
 
     @Autowired
-    UserServiceDAO service;
+    UserService service;
 
     @GetMapping("user")
     @ResponseBody
     public List<User> findAll() {
         return service.findAll();
-    }
-
-    @GetMapping("user/{id}")
-    @ResponseBody
-    public User findById(@PathVariable Long id) {
-        return service.findById(id);
     }
 
     @GetMapping("user/active")
@@ -38,6 +32,12 @@ public class UserControllerDAO {
     @ResponseBody
     public List<User> findInactive() {
         return service.findInactive();
+    }
+
+    @GetMapping("user/{id}")
+    @ResponseBody
+    public User findById(@PathVariable Long id) {
+        return service.findById(id);
     }
 
     @PostMapping("user")
@@ -54,8 +54,6 @@ public class UserControllerDAO {
 
     @DeleteMapping("user/{id}")
     public void deleteById(@PathVariable Long id) {
-        service.deleteById(id);
+        service.deleteByID(id);
     }
-
-
 }
