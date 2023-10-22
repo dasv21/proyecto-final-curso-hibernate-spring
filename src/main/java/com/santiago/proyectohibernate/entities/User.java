@@ -21,18 +21,18 @@ public class User {
     private Long id;
 
     @Column(name = "first_name", length = 30, nullable = false)
-    String firstName;
+    private String firstName;
 
     @Column(name = "last_name", length = 30)
-    String lastName;
+    private String lastName;
 
     @Column(unique = true, length = 20, nullable = false)
-    String dni;
+    private String dni;
 
-    Boolean active;
+    private Boolean active;
 
     @Column(name = "birth_date")
-    LocalDate birthDate;
+    private LocalDate birthDate;
 
     // --------- Asociaciones ---------
 
