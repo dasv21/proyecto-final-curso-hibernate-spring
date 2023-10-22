@@ -1,6 +1,7 @@
 package com.santiago.proyectohibernate.services;
 
 import com.santiago.proyectohibernate.entities.User;
+import com.santiago.proyectohibernate.projection.UserProjection;
 import com.santiago.proyectohibernate.repositories.UserRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -22,6 +23,10 @@ public class UserService {
 
     public List<User> findAll() {
         return repository.findAll();
+    }
+
+    public List<UserProjection> findAllUserProjection() {
+        return repository.findAllUserProjections();
     }
 
     public List<User> findActive() {

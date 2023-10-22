@@ -1,6 +1,7 @@
 package com.santiago.proyectohibernate.controller;
 
 import com.santiago.proyectohibernate.entities.User;
+import com.santiago.proyectohibernate.projection.UserProjection;
 import com.santiago.proyectohibernate.services.UserService;
 import lombok.RequiredArgsConstructor;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -9,50 +10,56 @@ import org.springframework.web.bind.annotation.*;
 import java.util.List;
 
 @RestController
-@RequestMapping("/api")
+@RequestMapping("/api/user")
 @RequiredArgsConstructor
 public class UserController {
 
     @Autowired
     UserService service;
 
-    @GetMapping("user")
+    @GetMapping
     @ResponseBody
     public List<User> findAll() {
         return service.findAll();
     }
 
-    @GetMapping("user/active")
+    @GetMapping("projection")
+    @ResponseBody
+    public List<UserProjection> findAllUserProjection() {
+        return service.findAllUserProjection();
+    }
+
+    @GetMapping("active")
     @ResponseBody
     public List<User> findActive() {
         return service.findActive();
     }
 
-    @GetMapping("user/inactive")
+    @GetMapping("inactive")
     @ResponseBody
     public List<User> findInactive() {
         return service.findInactive();
     }
 
-    @GetMapping("user/{id}")
+    @GetMapping("{id}")
     @ResponseBody
     public User findById(@PathVariable Long id) {
         return service.findById(id);
     }
 
-    @PostMapping("user")
+    @PostMapping
     @ResponseBody
     public User create(@RequestBody User user) {
         return service.create(user);
     }
 
-    @PutMapping("user")
+    @PutMapping
     @ResponseBody
     public User update(@RequestBody User user) {
         return service.update(user);
     }
 
-    @DeleteMapping("user/{id}")
+    @DeleteMapping("{id}")
     public void deleteById(@PathVariable Long id) {
         service.deleteByID(id);
     }
