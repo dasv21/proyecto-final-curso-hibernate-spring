@@ -14,7 +14,7 @@ import java.util.List;
 public class BillingInfoController {
 
     @Autowired
-    BillingInfoService service;
+    private BillingInfoService service;
 
     @GetMapping
     @ResponseBody

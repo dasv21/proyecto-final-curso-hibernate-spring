@@ -14,7 +14,7 @@ import java.util.List;
 public class TagController {
 
     @Autowired
-    TagService service;
+    private TagService service;
 
     @GetMapping
     @ResponseBody

@@ -14,7 +14,7 @@ import java.util.List;
 public class TaskController {
 
     @Autowired
-    TaskService service;
+    private TaskService service;
 
     @GetMapping
     @ResponseBody

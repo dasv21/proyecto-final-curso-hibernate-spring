@@ -1,5 +1,6 @@
 package com.santiago.proyectohibernate.entities;
 
+import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
 import lombok.Builder;
@@ -36,9 +37,11 @@ public class User {
 
     // --------- Asociaciones ---------
 
-    @OneToMany(cascade = CascadeType.ALL)
+    @JsonIgnoreProperties("user")
+    @OneToMany
     private List<Task> tasks;
 
-    @OneToOne(cascade = CascadeType.ALL)
+    @JsonIgnoreProperties("user")
+    @OneToOne
     private BillingInfo billingInfo;
 }
