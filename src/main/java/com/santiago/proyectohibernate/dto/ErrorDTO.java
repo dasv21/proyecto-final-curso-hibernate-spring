@@ -1,4 +1,4 @@
-package com.santiago.proyectohibernate.controller.dto;
+package com.santiago.proyectohibernate.dto;
 
 import lombok.Builder;
 import lombok.Data;

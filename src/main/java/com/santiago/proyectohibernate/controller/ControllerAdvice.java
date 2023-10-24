@@ -1,6 +1,6 @@
 package com.santiago.proyectohibernate.controller;
 
-import com.santiago.proyectohibernate.controller.dto.ErrorDTO;
+import com.santiago.proyectohibernate.dto.ErrorDTO;
 import com.santiago.proyectohibernate.exception.RequestValidateException;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.ExceptionHandler;
@@ -26,5 +26,4 @@ public class ControllerAdvice {
 
         return new ResponseEntity<>(error, exception.getStatus());
     }
-
 }
