@@ -1,518 +1,366 @@
 {
-  "info": {
-    "_postman_id": "2d840a57-5919-43be-af53-b06354ffbbc4",
-    "name": "proyecto-hibernate-spring",
-    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
-    "_exporter_id": "28018755"
-  },
-  "item": [
-    {
-      "name": "user",
-      "item": [
-        {
-          "name": "listar todos",
-          "request": {
-            "method": "GET",
-            "header": [],
-            "url": {
-              "raw": "http://localhost:8080/api/user",
-              "protocol": "http",
-              "host": [
-                "localhost"
-              ],
-              "port": "8080",
-              "path": [
-                "api",
-                "user"
-              ]
-            }
-          },
-          "response": []
-        },
-        {
-          "name": "listar por id",
-          "request": {
-            "method": "GET",
-            "header": [],
-            "url": {
-              "raw": "http://localhost:8080/api/user/11",
-              "protocol": "http",
-              "host": [
-                "localhost"
-              ],
-              "port": "8080",
-              "path": [
-                "api",
-                "user",
-                "11"
-              ]
-            }
-          },
-          "response": []
-        },
-        {
-          "name": "crear",
-          "request": {
-            "method": "POST",
-            "header": [],
-            "body": {
-              "mode": "raw",
-              "raw": "{\r\n    \"nombre\": \"prueba\",\r\n    \"apellido\": \"jpa\",\r\n    \"dni\": \"6437889\",\r\n    \"activo\": false,\r\n    \"fechaNacimiento\": \"1997-07-12\",\r\n    \"tareas\": [],\r\n    \"billingInfo\": null\r\n}\r\n",
-              "options": {
-                "raw": {
-                  "language": "json"
-                }
-              }
-            },
-            "url": {
-              "raw": "http://localhost:8080/api/user",
-              "protocol": "http",
-              "host": [
-                "localhost"
-              ],
-              "port": "8080",
-              "path": [
-                "api",
-                "user"
-              ]
-            }
-          },
-          "response": []
-        },
-        {
-          "name": "editar",
-          "request": {
-            "method": "PUT",
-            "header": [],
-            "body": {
-              "mode": "raw",
-              "raw": "{\r\n    \"id\": 6,\r\n    \"nombre\": \"luis\",\r\n    \"apellido\": \"update jpa\",\r\n    \"dni\": \"4314760\",\r\n    \"activo\": true,\r\n    \"fechaNacimiento\": \"1952-05-22\",\r\n    \"tareas\": [],\r\n    \"billingInfo\": null\r\n}",
-              "options": {
-                "raw": {
-                  "language": "json"
-                }
-              }
-            },
-            "url": {
-              "raw": "http://localhost:8080/api/user",
-              "protocol": "http",
-              "host": [
-                "localhost"
-              ],
-              "port": "8080",
-              "path": [
-                "api",
-                "user"
-              ]
-            }
-          },
-          "response": []
-        },
-        {
-          "name": "borrar por id",
-          "request": {
-            "method": "DELETE",
-            "header": [],
-            "url": {
-              "raw": "http://localhost:8080/api/user/13",
-              "protocol": "http",
-              "host": [
-                "localhost"
-              ],
-              "port": "8080",
-              "path": [
-                "api",
-                "user",
-                "13"
-              ]
-            }
-          },
-          "response": []
-        },
-        {
-          "name": "crear con asociaciones",
-          "request": {
-            "method": "POST",
-            "header": [],
-            "body": {
-              "mode": "raw",
-              "raw": "{\r\n    \"firstName\": \"david\",\r\n    \"lastName\": \"developer\",\r\n    \"dni\": \"1234999931\",\r\n    \"active\": true,\r\n    \"birthDate\": \"1996-02-12\",\r\n    \"tasks\": [\r\n        {\r\n            \"title\": \"Proyecto hibernate\",\r\n            \"description\": \"crear proyecto final para el curso de hibernate\",\r\n            \"finish\": true,\r\n            \"finishDate\": \"2023-12-12\",\r\n            \"tags\": [\r\n                {\r\n                    \"name\": \"Listo\",\r\n                    \"color\": \"GREEN\"\r\n                }\r\n            ]\r\n        }\r\n    ],\r\n    \"billingInfo\": {\r\n        \"street\": \"Av Principal\",\r\n        \"postalCode\": \"3153\",\r\n        \"city\": \"trujillo\",\r\n        \"country\": \"venezuela\"\r\n    }\r\n}\r\n",
-              "options": {
-                "raw": {
-                  "language": "json"
-                }
-              }
-            },
-            "url": {
-              "raw": "http://localhost:8080/api/user",
-              "protocol": "http",
-              "host": [
-                "localhost"
-              ],
-              "port": "8080",
-              "path": [
-                "api",
-                "user"
-              ]
-            }
-          },
-          "response": []
-        },
-        {
-          "name": "listar activos",
-          "request": {
-            "method": "GET",
-            "header": [],
-            "url": {
-              "raw": "http://localhost:8080/api/user/active",
-              "protocol": "http",
-              "host": [
-                "localhost"
-              ],
-              "port": "8080",
-              "path": [
-                "api",
-                "user",
-                "active"
-              ]
-            }
-          },
-          "response": []
-        },
-        {
-          "name": "listar inactivos",
-          "request": {
-            "method": "GET",
-            "header": [],
-            "url": {
-              "raw": "http://localhost:8080/api/user/inactive",
-              "protocol": "http",
-              "host": [
-                "localhost"
-              ],
-              "port": "8080",
-              "path": [
-                "api",
-                "user",
-                "inactive"
-              ]
-            }
-          },
-          "response": []
-        }
-      ]
-    },
-    {
-      "name": "task",
-      "item": [
-        {
-          "name": "listar todos",
-          "request": {
-            "method": "GET",
-            "header": [],
-            "url": {
-              "raw": "http://localhost:8080/api/task",
-              "protocol": "http",
-              "host": [
-                "localhost"
-              ],
-              "port": "8080",
-              "path": [
-                "api",
-                "task"
-              ]
-            }
-          },
-          "response": []
-        },
-        {
-          "name": "listar por id",
-          "request": {
-            "method": "GET",
-            "header": [],
-            "url": {
-              "raw": "http://localhost:8080/api/task/1",
-              "protocol": "http",
-              "host": [
-                "localhost"
-              ],
-              "port": "8080",
-              "path": [
-                "api",
-                "task",
-                "1"
-              ]
-            }
-          },
-          "response": []
-        },
-        {
-          "name": "crear",
-          "request": {
-            "method": "POST",
-            "header": [],
-            "body": {
-              "mode": "raw",
-              "raw": "{\r\n    \"titulo\": \"Prueba postman\",\r\n    \"descripcion\": \"crear tarea individual\",\r\n    \"finalizada\": false,\r\n    \"fechaEntrega\": \"2023-12-12\",\r\n    \"etiquetas\": [\r\n        {\r\n            \"nombre\": \"proceso\",\r\n            \"color\": \"RED\"\r\n        }\r\n    ]\r\n}",
-              "options": {
-                "raw": {
-                  "language": "json"
-                }
-              }
-            },
-            "url": {
-              "raw": "http://localhost:8080/api/task",
-              "protocol": "http",
-              "host": [
-                "localhost"
-              ],
-              "port": "8080",
-              "path": [
-                "api",
-                "task"
-              ]
-            }
-          },
-          "response": []
-        },
-        {
-          "name": "editar",
-          "request": {
-            "method": "PUT",
-            "header": [],
-            "body": {
-              "mode": "raw",
-              "raw": "{\r\n    \"id\": 1,\r\n    \"titulo\": \"Proyecto hibernate\",\r\n    \"descripcion\": \"prueba de update\",\r\n    \"finalizada\": true,\r\n    \"fechaEntrega\": \"2023-12-12\",\r\n    \"etiquetas\": [\r\n        {\r\n            \"id\":1,\r\n            \"nombre\": \"Listo\",\r\n            \"color\": \"GREEN\"\r\n        }\r\n    ]\r\n}",
-              "options": {
-                "raw": {
-                  "language": "json"
-                }
-              }
-            },
-            "url": {
-              "raw": "http://localhost:8080/api/task",
-              "protocol": "http",
-              "host": [
-                "localhost"
-              ],
-              "port": "8080",
-              "path": [
-                "api",
-                "task"
-              ]
-            }
-          },
-          "response": []
-        }
-      ]
-    },
-    {
-      "name": "tag",
-      "item": [
-        {
-          "name": "listar todos",
-          "request": {
-            "method": "GET",
-            "header": [],
-            "url": {
-              "raw": "http://localhost:8080/api/tag",
-              "protocol": "http",
-              "host": [
-                "localhost"
-              ],
-              "port": "8080",
-              "path": [
-                "api",
-                "tag"
-              ]
-            }
-          },
-          "response": []
-        },
-        {
-          "name": "listar por id",
-          "request": {
-            "method": "GET",
-            "header": [],
-            "url": {
-              "raw": "http://localhost:8080/api/tag/1",
-              "protocol": "http",
-              "host": [
-                "localhost"
-              ],
-              "port": "8080",
-              "path": [
-                "api",
-                "tag",
-                "1"
-              ]
-            }
-          },
-          "response": []
-        },
-        {
-          "name": "crear",
-          "request": {
-            "method": "POST",
-            "header": [],
-            "body": {
-              "mode": "raw",
-              "raw": "{\r\n    \"nombre\": \"prieba\",\r\n    \"color\": \"GREEN\"\r\n}",
-              "options": {
-                "raw": {
-                  "language": "json"
-                }
-              }
-            },
-            "url": {
-              "raw": "http://localhost:8080/api/tag",
-              "protocol": "http",
-              "host": [
-                "localhost"
-              ],
-              "port": "8080",
-              "path": [
-                "api",
-                "tag"
-              ]
-            }
-          },
-          "response": []
-        },
-        {
-          "name": "editar",
-          "request": {
-            "method": "PUT",
-            "header": [],
-            "body": {
-              "mode": "raw",
-              "raw": "{\r\n    \"id\": 1,\r\n    \"nombre\": \"Listo\",\r\n    \"color\": \"BLUE\"\r\n}",
-              "options": {
-                "raw": {
-                  "language": "json"
-                }
-              }
-            },
-            "url": {
-              "raw": "http://localhost:8080/api/tag",
-              "protocol": "http",
-              "host": [
-                "localhost"
-              ],
-              "port": "8080",
-              "path": [
-                "api",
-                "tag"
-              ]
-            }
-          },
-          "response": []
-        }
-      ]
-    },
-    {
-      "name": "billingInfo",
-      "item": [
-        {
-          "name": "listar todos",
-          "request": {
-            "method": "GET",
-            "header": [],
-            "url": {
-              "raw": "http://localhost:8080/api/billingInfo",
-              "protocol": "http",
-              "host": [
-                "localhost"
-              ],
-              "port": "8080",
-              "path": [
-                "api",
-                "billingInfo"
-              ]
-            }
-          },
-          "response": []
-        },
-        {
-          "name": "listar por id",
-          "request": {
-            "method": "GET",
-            "header": [],
-            "url": {
-              "raw": "http://localhost:8080/api/billingInfo/1",
-              "protocol": "http",
-              "host": [
-                "localhost"
-              ],
-              "port": "8080",
-              "path": [
-                "api",
-                "billingInfo",
-                "1"
-              ]
-            }
-          },
-          "response": []
-        },
-        {
-          "name": "crear",
-          "request": {
-            "method": "POST",
-            "header": [],
-            "body": {
-              "mode": "raw",
-              "raw": "{\r\n    \"descripcion\": \"descripcion de la facturacion creado desde postman\"\r\n}",
-              "options": {
-                "raw": {
-                  "language": "json"
-                }
-              }
-            },
-            "url": {
-              "raw": "http://localhost:8080/api/billingInfo",
-              "protocol": "http",
-              "host": [
-                "localhost"
-              ],
-              "port": "8080",
-              "path": [
-                "api",
-                "billingInfo"
-              ]
-            }
-          },
-          "response": []
-        },
-        {
-          "name": "editar",
-          "request": {
-            "method": "PUT",
-            "header": [],
-            "body": {
-              "mode": "raw",
-              "raw": "[\r\n    {\r\n        \"id\": 1,\r\n        \"descripcion\": \"descripcion update\"\r\n    }\r\n]",
-              "options": {
-                "raw": {
-                  "language": "json"
-                }
-              }
-            },
-            "url": {
-              "raw": "http://localhost:8080/api/tag",
-              "protocol": "http",
-              "host": [
-                "localhost"
-              ],
-              "port": "8080",
-              "path": [
-                "api",
-                "tag"
-              ]
-            }
-          },
-          "response": []
-        }
-      ]
-    }
-  ]
+	"info": {
+		"_postman_id": "2d840a57-5919-43be-af53-b06354ffbbc4",
+		"name": "proyecto-hibernate-spring",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "28018755"
+	},
+	"item": [
+		{
+			"name": "user",
+			"item": [
+				{
+					"name": "listar todos",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/api/user",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"user"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "buscar por id",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/api/user/11",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"user",
+								"11"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "crear",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"firstName\": \"prueba\",\r\n    \"lastName\": \"jpa\",\r\n    \"dni\": \"6437889\",\r\n    \"active\": false,\r\n    \"birthDate\": null,\r\n    \"billingInfo\": {\r\n        \"street\": \"Calle Principal\",\r\n        \"postalCode\": \"12345\",\r\n        \"city\": \"Madrid\",\r\n        \"country\": \"España\"\r\n    }\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/api/user",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"user"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "editar",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"id\": 6,\r\n    \"firstName\": \"luis\",\r\n    \"lastName\": \"update\",\r\n    \"dni\": \"66666666\",\r\n    \"active\": true,\r\n    \"birthDate\": \"1952-05-22\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/api/user",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"user"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "borrar por id",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/api/user/13",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"user",
+								"13"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "listar activos",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/api/user/active",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"user",
+								"active"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "listar inactivos",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/api/user/inactive",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"user",
+								"inactive"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "listar todos proyeccion",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/api/user/projection",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"user",
+								"projection"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "task",
+			"item": [
+				{
+					"name": "listar todos",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/api/task",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"task"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "listar por id",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/api/task/1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"task",
+								"1"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "tag",
+			"item": [
+				{
+					"name": "listar todos",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/api/tag",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"tag"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "listar por id",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/api/tag/1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"tag",
+								"1"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "billingInfo",
+			"item": [
+				{
+					"name": "listar todos",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/api/billingInfo",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"billingInfo"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "listar por id",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/api/billingInfo/1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"billingInfo",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "crear",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"street\": \"Calle Principal\",\r\n  \"postalCode\": \"12345\",\r\n  \"city\": \"Madrid\",\r\n  \"country\": \"España\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/api/billingInfo/6",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"billingInfo",
+								"6"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
 }

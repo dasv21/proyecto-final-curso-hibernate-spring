@@ -38,10 +38,10 @@ public class User {
     // --------- Asociaciones ---------
 
     @JsonIgnoreProperties("user")
-    @OneToMany
+    @OneToMany(cascade = CascadeType.ALL)
     private List<Task> tasks;
 
     @JsonIgnoreProperties("user")
-    @OneToOne
+    @OneToOne(cascade = CascadeType.ALL)
     private BillingInfo billingInfo;
 }
