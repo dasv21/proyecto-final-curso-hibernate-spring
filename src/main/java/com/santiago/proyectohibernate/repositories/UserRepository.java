@@ -11,6 +11,8 @@ import java.util.List;
 @Repository
 public interface UserRepository extends JpaRepository<User, Long> {
 
+    User findByDni(String dni);
+
     @Query("SELECT u.id AS id, u.firstName AS firstName, u.dni AS dni, u.active AS active FROM User u")
     List<UserProjection> findAllUserProjections();
 
