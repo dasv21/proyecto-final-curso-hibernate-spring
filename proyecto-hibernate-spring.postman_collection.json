@@ -209,7 +209,7 @@
 						"header": [],
 						"body": {
 							"mode": "raw",
-							"raw": "{\r\n\"street\": \"Calle prueba\",\r\n\"postalCode\": \"12345\",\r\n\"city\": \"Madrid\",\r\n\"country\": \"España\"\r\n}",
+							"raw": "{\r\n    \"street\": \"Calle prueba\",\r\n    \"postalCode\": \"12345\",\r\n    \"city\": \"Madrid\",\r\n    \"country\": \"España\"\r\n}",
 							"options": {
 								"raw": {
 									"language": "json"
@@ -228,6 +228,37 @@
 								"users",
 								"6",
 								"billingInfo"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "agregar task",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"id\": 1,\r\n    \"title\": \"task prueba\",\r\n    \"description\": \"prueba de asignar task a un user\",\r\n    \"finishDate\": \"2023-12-22\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/api/users/6/task",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"users",
+								"6",
+								"task"
 							]
 						}
 					},
@@ -257,27 +288,6 @@
 						}
 					},
 					"response": []
-				},
-				{
-					"name": "listar por id",
-					"request": {
-						"method": "GET",
-						"header": [],
-						"url": {
-							"raw": "http://localhost:8080/api/task/1",
-							"protocol": "http",
-							"host": [
-								"localhost"
-							],
-							"port": "8080",
-							"path": [
-								"api",
-								"task",
-								"1"
-							]
-						}
-					},
-					"response": []
 				}
 			]
 		},
@@ -299,27 +309,6 @@
 							"path": [
 								"api",
 								"tag"
-							]
-						}
-					},
-					"response": []
-				},
-				{
-					"name": "listar por id",
-					"request": {
-						"method": "GET",
-						"header": [],
-						"url": {
-							"raw": "http://localhost:8080/api/tag/1",
-							"protocol": "http",
-							"host": [
-								"localhost"
-							],
-							"port": "8080",
-							"path": [
-								"api",
-								"tag",
-								"1"
 							]
 						}
 					},

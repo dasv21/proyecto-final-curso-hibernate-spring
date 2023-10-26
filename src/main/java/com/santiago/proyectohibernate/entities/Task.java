@@ -1,5 +1,6 @@
 package com.santiago.proyectohibernate.entities;
 
+import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
 import lombok.Builder;
@@ -14,6 +15,7 @@ import java.util.List;
 @NoArgsConstructor
 @AllArgsConstructor
 @Builder
+@JsonIgnoreProperties("user")
 public class Task {
 
     @Id
@@ -26,7 +28,7 @@ public class Task {
     @Column(length = 200)
     private String description;
 
-    private Boolean finish;
+    private Boolean finish = false;
 
     @Column(name = "finish_date")
     private LocalDate finishDate;
@@ -36,7 +38,7 @@ public class Task {
     @ManyToMany(cascade = CascadeType.ALL)
     private List<Tag> tags;
 
-    @ManyToOne
+    @ManyToOne(cascade = CascadeType.ALL)
     @JoinColumn(name = "user_id")
     private User user;
 }

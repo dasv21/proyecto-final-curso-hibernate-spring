@@ -1,9 +1,11 @@
 package com.santiago.proyectohibernate.controller;
 
 import com.santiago.proyectohibernate.entities.BillingInfo;
+import com.santiago.proyectohibernate.entities.Task;
 import com.santiago.proyectohibernate.entities.User;
 import com.santiago.proyectohibernate.projection.UserProjection;
 import com.santiago.proyectohibernate.services.BillingInfoService;
+import com.santiago.proyectohibernate.services.TaskService;
 import com.santiago.proyectohibernate.services.UserService;
 import lombok.RequiredArgsConstructor;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -21,6 +23,9 @@ public class UserController {
 
     @Autowired
     BillingInfoService billingInfoService;
+
+    @Autowired
+    TaskService taskService;
 
     @GetMapping
     @ResponseBody
@@ -73,5 +78,11 @@ public class UserController {
     @ResponseBody
     public BillingInfo updateBillinInfo(@RequestBody BillingInfo billingInfo, @PathVariable Long id) {
         return billingInfoService.update(billingInfo, id);
+    }
+
+    @PostMapping("{id}/task")
+    @ResponseBody
+    public Task createTask(@RequestBody Task task, @PathVariable Long id) {
+        return taskService.create(task, id);
     }
 }

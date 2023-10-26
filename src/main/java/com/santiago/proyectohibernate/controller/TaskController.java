@@ -21,27 +21,4 @@ public class TaskController {
     public List<Task> findAll() {
         return taskService.findAll();
     }
-
-    @GetMapping("{id}")
-    @ResponseBody
-    public Task findById(@PathVariable Long id) {
-        return taskService.findById(id);
-    }
-
-    @PostMapping
-    @ResponseBody
-    public Task create(@RequestBody Task task) {
-        return taskService.create(task);
-    }
-
-    @PutMapping
-    @ResponseBody
-    public Task update(@RequestBody Task task) {
-        return taskService.update(task);
-    }
-
-    @DeleteMapping("{id}")
-    public void deleteById(@PathVariable Long id) {
-        taskService.deleteByID(id);
-    }
 }

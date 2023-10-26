@@ -20,7 +20,7 @@ public class BillingInfoService {
 
     public BillingInfo create(BillingInfo billingInfo, Long userId) {
         User user = userRepository.findById(userId).get();
-        billingInfo.setUserId(userId);
+        billingInfo.setUserId(user.getId());
         user.setBillingInfo(billingInfo);
         userRepository.save(user);
         return billingInfo;
