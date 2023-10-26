@@ -65,13 +65,13 @@ public class UserController {
 
     @PostMapping("{id}/billingInfo")
     @ResponseBody
-    public User createBillinInfo(@RequestBody BillingInfo billingInfo, @PathVariable Long id) {
+    public BillingInfo createBillinInfo(@RequestBody BillingInfo billingInfo, @PathVariable Long id) {
         return billingInfoService.create(billingInfo, id);
     }
 
     @PutMapping("{id}/billingInfo")
     @ResponseBody
-    public User updateBillinInfo(@RequestBody BillingInfo billingInfo, @PathVariable Long id) {
+    public BillingInfo updateBillinInfo(@RequestBody BillingInfo billingInfo, @PathVariable Long id) {
         return billingInfoService.update(billingInfo, id);
     }
 }

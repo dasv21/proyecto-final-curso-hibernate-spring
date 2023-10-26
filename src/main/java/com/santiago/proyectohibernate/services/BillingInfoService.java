@@ -18,16 +18,19 @@ public class BillingInfoService {
     @Autowired
     UserRepository userRepository;
 
-    public User create(BillingInfo billingInfo, Long userId) {
+    public BillingInfo create(BillingInfo billingInfo, Long userId) {
         User user = userRepository.findById(userId).get();
+        billingInfo.setUserId(userId);
         user.setBillingInfo(billingInfo);
-        return userRepository.save(user);
+        userRepository.save(user);
+        return billingInfo;
     }
 
-    public User update(BillingInfo billingInfo, Long userId) {
+    public BillingInfo update(BillingInfo billingInfo, Long userId) {
         User user = userRepository.findById(userId).get();
         user.setBillingInfo(billingInfo);
-        return userRepository.save(user);
+        userRepository.save(user);
+        return billingInfo;
     }
 
     public List<BillingInfo> findAll() {

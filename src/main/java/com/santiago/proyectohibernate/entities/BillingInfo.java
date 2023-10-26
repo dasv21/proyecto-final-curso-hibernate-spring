@@ -29,7 +29,8 @@ public class BillingInfo {
 
     private String country;
 
-    private Long user_id;
+    @Column(unique = true, nullable = false, updatable = false)
+    private Long userId;
 
     // --------- Asociaciones ---------
 

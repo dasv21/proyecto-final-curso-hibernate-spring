@@ -57,7 +57,7 @@
 						"header": [],
 						"body": {
 							"mode": "raw",
-							"raw": "{\r\n    \"firstName\": \"prueba\",\r\n    \"lastName\": \"jpa\",\r\n    \"dni\": \"6437889\",\r\n    \"active\": false\r\n}",
+							"raw": "{\r\n    \"firstName\": \"prueba\",\r\n    \"lastName\": \"jpa\",\r\n    \"dni\": \"6437889\",\r\n    \"email\": \"email@pruebapostman\",\r\n    \"active\": false\r\n}",
 							"options": {
 								"raw": {
 									"language": "json"
@@ -86,7 +86,7 @@
 						"header": [],
 						"body": {
 							"mode": "raw",
-							"raw": "{\r\n    \"id\": 6,\r\n    \"firstName\": \"luis\",\r\n    \"lastName\": \"update\",\r\n    \"dni\": \"66666666\",\r\n    \"active\": true,\r\n    \"birthDate\": \"1952-05-22\"\r\n}",
+							"raw": "{\r\n    \"id\": 6,\r\n    \"firstName\": \"luis\",\r\n    \"lastName\": \"update\",\r\n    \"email\": \"email@update\",\r\n    \"dni\": \"66666666\",\r\n    \"active\": true,\r\n    \"birthDate\": \"1952-05-22\"\r\n}",
 							"options": {
 								"raw": {
 									"language": "json"
@@ -178,7 +178,7 @@
 						"header": [],
 						"body": {
 							"mode": "raw",
-							"raw": "{\r\n    \"id\": 1,\r\n    \"street\": \"Calle update\",\r\n    \"postalCode\": \"12345\",\r\n    \"city\": \"prueba del update \",\r\n    \"country\": \"España\",\r\n    \"user_id\": 6\r\n}",
+							"raw": "{\r\n    \"id\": 1,\r\n    \"street\": \"Calle upduuate\",\r\n    \"postalCode\": \"12345\",\r\n    \"city\": \"prueba del update \",\r\n    \"country\": \"España\"\r\n}",
 							"options": {
 								"raw": {
 									"language": "json"

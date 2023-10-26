@@ -13,12 +13,12 @@ public interface UserRepository extends JpaRepository<User, Long> {
 
     User findByDni(String dni);
 
-    @Query("SELECT u.id AS id, u.firstName AS firstName, u.dni AS dni, u.active AS active FROM User u")
+    @Query("SELECT u.id AS id, u.firstName AS firstName, u.email AS email, u.dni AS dni, u.active AS active FROM User u")
     List<UserProjection> findAllUserProjections();
 
-    @Query("SELECT u.id AS id, u.firstName AS firstName, u.dni AS dni, u.active AS active FROM User u WHERE u.active = true")
+    @Query("SELECT u.id AS id, u.firstName AS firstName, u.email AS email, u.dni AS dni, u.active AS active FROM User u WHERE u.active = true")
     List<UserProjection> findByActiveTrue();
 
-    @Query("SELECT u.id AS id, u.firstName AS firstName, u.dni AS dni, u.active AS active FROM User u WHERE u.active = false")
+    @Query("SELECT u.id AS id, u.firstName AS firstName, u.email AS email, u.dni AS dni, u.active AS active FROM User u WHERE u.active = false")
     List<UserProjection> findByActiveFalse();
 }

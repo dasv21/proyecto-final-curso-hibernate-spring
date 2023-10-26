@@ -30,6 +30,9 @@ public class User {
     @Column(unique = true, length = 20, nullable = false)
     private String dni;
 
+    @Column(unique = true, length = 30, nullable = false)
+    private String email;
+
     private Boolean active;
 
     @Column(name = "birth_date")

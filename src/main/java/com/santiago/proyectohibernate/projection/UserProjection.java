@@ -5,6 +5,8 @@ public interface UserProjection {
 
     String getFirstName();
 
+    String getEmail();
+
     String getDni();
 
     Boolean getActive();
