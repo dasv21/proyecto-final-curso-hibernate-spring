@@ -14,7 +14,7 @@ import java.util.List;
 public class UserService {
 
     @Autowired
-    private UserRepository userRepository;
+    UserRepository userRepository;
 
     public User create(User user) {
 
@@ -28,19 +28,16 @@ public class UserService {
         return userRepository.save(user);
     }
 
-    public List<User> findAll() {
-        return userRepository.findAll();
-    }
 
     public List<UserProjection> findAllUserProjection() {
         return userRepository.findAllUserProjections();
     }
 
-    public List<User> findActive() {
+    public List<UserProjection> findActive() {
         return userRepository.findByActiveTrue();
     }
 
-    public List<User> findInactive() {
+    public List<UserProjection> findInactive() {
         return userRepository.findByActiveFalse();
     }
 

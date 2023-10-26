@@ -14,34 +14,34 @@ import java.util.List;
 public class TaskController {
 
     @Autowired
-    private TaskService service;
+    TaskService taskService;
 
     @GetMapping
     @ResponseBody
     public List<Task> findAll() {
-        return service.findAll();
+        return taskService.findAll();
     }
 
     @GetMapping("{id}")
     @ResponseBody
     public Task findById(@PathVariable Long id) {
-        return service.findById(id);
+        return taskService.findById(id);
     }
 
     @PostMapping
     @ResponseBody
     public Task create(@RequestBody Task task) {
-        return service.create(task);
+        return taskService.create(task);
     }
 
     @PutMapping
     @ResponseBody
     public Task update(@RequestBody Task task) {
-        return service.update(task);
+        return taskService.update(task);
     }
 
     @DeleteMapping("{id}")
     public void deleteById(@PathVariable Long id) {
-        service.deleteByID(id);
+        taskService.deleteByID(id);
     }
 }

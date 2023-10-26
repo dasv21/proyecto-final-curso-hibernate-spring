@@ -13,10 +13,10 @@ import java.util.List;
 public class BillingInfoService {
 
     @Autowired
-    private BillingInfoRepository billingInfoRepository;
+    BillingInfoRepository billingInfoRepository;
 
     @Autowired
-    private UserRepository userRepository;
+    UserRepository userRepository;
 
     public User create(BillingInfo billingInfo, Long userId) {
         User user = userRepository.findById(userId).get();

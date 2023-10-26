@@ -11,7 +11,7 @@ import java.util.List;
 public class TaskService {
 
     @Autowired
-    private TaskRepository repository;
+    TaskRepository repository;
 
     public Task create(Task task) {
         return repository.save(task);

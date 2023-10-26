@@ -1,9 +1,13 @@
 package com.santiago.proyectohibernate.exception;
 
-import lombok.Data;
+import lombok.Getter;
+import lombok.Setter;
+import lombok.ToString;
 import org.springframework.http.HttpStatus;
 
-@Data
+@Getter
+@Setter
+@ToString
 public class RequestValidateException extends RuntimeException {
 
     private HttpStatus status;

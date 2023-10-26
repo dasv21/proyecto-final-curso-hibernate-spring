@@ -14,34 +14,34 @@ import java.util.List;
 public class TagController {
 
     @Autowired
-    private TagService service;
+    TagService tagService;
 
     @GetMapping
     @ResponseBody
     public List<Tag> findAll() {
-        return service.findAll();
+        return tagService.findAll();
     }
 
     @GetMapping("{id}")
     @ResponseBody
     public Tag findById(@PathVariable Long id) {
-        return service.findById(id);
+        return tagService.findById(id);
     }
 
     @PostMapping
     @ResponseBody
     public Tag create(@RequestBody Tag tag) {
-        return service.create(tag);
+        return tagService.create(tag);
     }
 
     @PutMapping
     @ResponseBody
     public Tag update(@RequestBody Tag tag) {
-        return service.update(tag);
+        return tagService.update(tag);
     }
 
     @DeleteMapping("{id}")
     public void deleteById(@PathVariable Long id) {
-        service.deleteByID(id);
+        tagService.deleteByID(id);
     }
 }

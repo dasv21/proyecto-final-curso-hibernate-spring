@@ -11,7 +11,7 @@ import java.util.List;
 public class TagService {
 
     @Autowired
-    private TagRepository repository;
+    TagRepository repository;
 
     public Tag create(Tag tag) {
         return repository.save(tag);

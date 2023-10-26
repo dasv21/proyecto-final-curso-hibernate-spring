@@ -17,10 +17,10 @@ import java.util.List;
 public class UserController {
 
     @Autowired
-    private UserService userService;
+    UserService userService;
 
     @Autowired
-    private BillingInfoService billingInfoService;
+    BillingInfoService billingInfoService;
 
     @GetMapping
     @ResponseBody
@@ -30,13 +30,13 @@ public class UserController {
 
     @GetMapping("active")
     @ResponseBody
-    public List<User> findActive() {
+    public List<UserProjection> findActive() {
         return userService.findActive();
     }
 
     @GetMapping("inactive")
     @ResponseBody
-    public List<User> findInactive() {
+    public List<UserProjection> findInactive() {
         return userService.findInactive();
     }
 
