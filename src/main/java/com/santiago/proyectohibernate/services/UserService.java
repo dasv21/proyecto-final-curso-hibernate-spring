@@ -12,42 +12,44 @@ import java.util.List;
 
 @Service
 public class UserService {
+
     @Autowired
-    private UserRepository repository;
+    private UserRepository userRepository;
 
     public User create(User user) {
 
-        if (repository.findByDni(user.getDni()) != null) {
+        if (userRepository.findByDni(user.getDni()) != null) {
             throw new RequestValidateException("Dni is already registered with another user", HttpStatus.CONFLICT);
         }
-        return repository.save(user);
+        return userRepository.save(user);
     }
 
     public User update(User user) {
-        return repository.save(user);
+        return userRepository.save(user);
     }
 
     public List<User> findAll() {
-        return repository.findAll();
+        return userRepository.findAll();
     }
 
     public List<UserProjection> findAllUserProjection() {
-        return repository.findAllUserProjections();
+        return userRepository.findAllUserProjections();
     }
 
     public List<User> findActive() {
-        return repository.findByActiveTrue();
+        return userRepository.findByActiveTrue();
     }
 
     public List<User> findInactive() {
-        return repository.findByActiveFalse();
+        return userRepository.findByActiveFalse();
     }
 
     public User findById(Long id) {
-        return repository.findById(id).orElse(null);
+        return userRepository.findById(id).orElse(null);
     }
 
     public void deleteByID(Long id) {
-        repository.deleteById(id);
+        userRepository.deleteById(id);
     }
+
 }

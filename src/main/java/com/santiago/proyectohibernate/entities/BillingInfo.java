@@ -1,5 +1,6 @@
 package com.santiago.proyectohibernate.entities;
 
+import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
 import lombok.Builder;
@@ -12,6 +13,7 @@ import lombok.NoArgsConstructor;
 @NoArgsConstructor
 @AllArgsConstructor
 @Builder
+@JsonIgnoreProperties("user")
 public class BillingInfo {
 
     @Id
@@ -27,8 +29,10 @@ public class BillingInfo {
 
     private String country;
 
+    private Long user_id;
+
     // --------- Asociaciones ---------
 
-    @OneToOne(mappedBy = "billingInfo")
+    @OneToOne(mappedBy = "billingInfo", cascade = CascadeType.ALL)
     private User user;
 }

@@ -36,7 +36,6 @@ public class Task {
     @ManyToMany(cascade = CascadeType.ALL)
     private List<Tag> tags;
 
-
     @ManyToOne
     @JoinColumn(name = "user_id")
     private User user;

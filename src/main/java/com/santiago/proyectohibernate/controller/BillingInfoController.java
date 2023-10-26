@@ -14,34 +14,11 @@ import java.util.List;
 public class BillingInfoController {
 
     @Autowired
-    private BillingInfoService service;
+    private BillingInfoService billingInfoService;
 
     @GetMapping
     @ResponseBody
     public List<BillingInfo> findAll() {
-        return service.findAll();
-    }
-
-    @GetMapping("{id}")
-    @ResponseBody
-    public BillingInfo findById(@PathVariable Long id) {
-        return service.findById(id);
-    }
-
-    @PostMapping
-    @ResponseBody
-    public BillingInfo create(@RequestBody BillingInfo billingInfo) {
-        return service.create(billingInfo);
-    }
-
-    @PutMapping
-    @ResponseBody
-    public BillingInfo update(@RequestBody BillingInfo billingInfo) {
-        return service.update(billingInfo);
-    }
-
-    @DeleteMapping("{id}")
-    public void deleteById(@PathVariable Long id) {
-        service.deleteByID(id);
+        return billingInfoService.findAll();
     }
 }
