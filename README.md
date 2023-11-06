@@ -2,14 +2,11 @@
 
 Este proyecto es el proyecto final del curso de Hibernate y Spring de David Santiago. Se trata de una aplicación web que gestiona usuarios, tareas y facturación que utiliza las siguientes tecnologías:
 
-* Java
-* Spring Boot
-* Hibernate
-* Spring JPA
-* Lombok
-* Spring DevTools
-* Spring Web
-* Docker
+* Spring Boot 3.1.4
+* Eclipse temurin 17_45-jdk
+* MySql 8.1.0
+* SpringDoc OpenAPI 2.1.0
+* Docker 24.0.7
 
 ## Características
 Gestión de usuarios: el usuario puede crear, editar y eliminar su cuenta.
@@ -20,9 +17,15 @@ Información de facturación: el usuario puede ver su historial de facturación.
 
 Para instalar el proyecto, sigue estos pasos:
 
-Descarga el proyecto desde GitHub.
-Abre una terminal desde la raiz del repositorio 
-ejecuta el comando '''docker compose up'''
+1- Descarga el proyecto desde GitHub.
+
+2- Abre una terminal desde la raiz del repositorio 
+
+3- Ejecuta el comando
+
+'''bash
+docker compose up
+'''
 
 Para hacer pruebas de los endpoint desde postman, importa el postman_collection que esta en la raiz del proyecto
 
