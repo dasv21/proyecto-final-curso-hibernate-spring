@@ -9,6 +9,7 @@ Este proyecto es el proyecto final del curso de Hibernate y Spring de David Sant
 * Lombok
 * Spring DevTools
 * Spring Web
+* Docker
 
 ## Características
 Gestión de usuarios: el usuario puede crear, editar y eliminar su cuenta.
@@ -20,10 +21,10 @@ Información de facturación: el usuario puede ver su historial de facturación.
 Para instalar el proyecto, sigue estos pasos:
 
 Descarga el proyecto desde GitHub.
-Crea un snapshot de Maven.
-Instala MySQL 8.0 o superior.
+Abre una terminal desde la raiz del repositorio 
+ejecuta el comando '''docker compose up'''
 
-Se pueden hacer pruebas desde postman importando el archivo postman que esta en la raiz del proyecto
+Para hacer pruebas de los endpoint desde postman, importa el postman_collection que esta en la raiz del proyecto
 
 ## Contacto
 
