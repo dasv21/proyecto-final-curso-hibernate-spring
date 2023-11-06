@@ -15,7 +15,7 @@ public class SwaggerConfig {
                 .info(new Info()
                         .title("Proyecto Final Hibernate")
                         .version("1.0")
-                        .description("Api Rest desarrollada para almacenar la informacion de usuarios asignarles tareas y su seguimiento")
+                        .description("Api Rest desarrollada para almacesar la informacion de usuarios asignarles tareas y su seguimiento")
                         .termsOfService("http://swagger.io/term/")
                         .contact(new Contact()
                                 .name("David Santiago")
