@@ -1,6 +1,9 @@
 # Proyecto final de Hibernate y Spring
 
-Este proyecto es el proyecto final del curso de Hibernate y Spring de David Santiago. Se trata de una aplicación web que gestiona usuarios, tareas y facturación que utiliza las siguientes tecnologías:
+Este proyecto es el proyecto final del curso de Hibernate y Spring de David Santiago. Se trata de una aplicación web
+que gestiona usuarios las tareas que se le asignan y guarda la indormacion de facturación de cada usuario.
+
+## Tecnologias aplicadas:
 
 * Spring Boot 3.1.4
 * Eclipse temurin 17_45-jdk
@@ -19,15 +22,17 @@ Para instalar el proyecto, sigue estos pasos:
 
 1- Descarga el proyecto desde GitHub.
 
-2- Abre una terminal desde la raiz del repositorio 
+2- Abre una terminal desde la raiz del repositorio.
 
-3- Ejecuta el comando
+3- Ejecuta el comando.
 
-'''bash
+```
 docker compose up
-'''
+```
 
-Para hacer pruebas de los endpoint desde postman, importa el postman_collection que esta en la raiz del proyecto
+La app se desplegara en el puerto 8080 por defecto.
+
+Para hacer pruebas de los endpoint desde postman, importa el postman_collection que esta en la raiz del proyecto.
 
 ## Contacto
 
